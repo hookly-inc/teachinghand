@@ -1,0 +1,13 @@
+.navbar {
+  background-color: $default-blue;
+  color: white;
+  max-width: 100%;
+  padding: $m-size;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%;
+}
