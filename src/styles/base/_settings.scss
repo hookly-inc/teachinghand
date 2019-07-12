@@ -7,10 +7,13 @@ $yellow: #ffc000;
 $orange: #f7941d;
 
 // Spacing
-$s-size: 1.2rem;
-$m-size: 1.6rem;
+$s-size: 0.5rem;
+$m-size: 1.5rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
 
 // Fonts
 $default-font: 'Roboto', sans-serif;
+
+// Breakpoints
+$desktop-breakpoint: 992px;

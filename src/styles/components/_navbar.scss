@@ -2,12 +2,20 @@
   background-color: $default-blue;
   color: white;
   max-width: 100%;
-  padding: $m-size;
+  padding: $s-size;
 }
 
 .navbar__container {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 60%;
+  
+  @media screen and (min-width: $desktop-breakpoint) {
+    max-width: $desktop-breakpoint;
+  }
+}
+
+.navbar__logo {
+  max-width: 120px;
 }
