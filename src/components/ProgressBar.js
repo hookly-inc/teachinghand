@@ -4,8 +4,8 @@ class ProgressBar extends Component {
   render() {
     return (
       <div>
-        <h3>Progresso: </h3>
-        <div class="progress-bar"></div>
+        <span>Progresso: </span>
+        <div className="progress-bar"></div>
       </div>
     );
   }

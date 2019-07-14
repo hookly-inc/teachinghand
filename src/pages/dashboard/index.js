@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import ProgressBar from '../../components/ProgressBar';
+import ActivitiesPanel from '../../components/ActivitiesPanel';
 
 const Dashboard = () => {
   return (
@@ -8,6 +9,7 @@ const Dashboard = () => {
       <Navbar />
       <div className="dashboard">
         <ProgressBar />
+        <ActivitiesPanel />
       </div>
     </div>
   )

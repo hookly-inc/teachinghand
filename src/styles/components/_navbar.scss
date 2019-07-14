@@ -2,7 +2,7 @@
   background-color: $default-blue;
   color: white;
   max-width: 100%;
-  padding: $s-size;
+  padding: $s-size $m-size;
 }
 
 .navbar__container {
@@ -17,5 +17,5 @@
 }
 
 .navbar__logo {
-  max-width: 120px;
+  max-width: 100px;
 }

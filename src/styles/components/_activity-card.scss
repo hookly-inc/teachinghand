@@ -1,0 +1,24 @@
+.activity-card {
+  align-items: center;
+  background-color: darken($color: $gray, $amount: 1.5);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.activity-card__title {
+  font-size: $l-size * .7;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.activity-card__img {
+  max-width: 80%;
+}

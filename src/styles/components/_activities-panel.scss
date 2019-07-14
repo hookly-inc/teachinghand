@@ -1,0 +1,15 @@
+.activities-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $m-size;
+  margin: $m-size 0;
+  width: 100%;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
