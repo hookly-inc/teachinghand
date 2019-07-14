@@ -7,12 +7,6 @@ class ActivityCard extends Component {
     locked: this.props.locked
   }
 
-  handleUnlock() {
-    this.setState({
-      locked: false
-    });
-  }
-
   render() {
     return (
       <div className='activity-card'>
