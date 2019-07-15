@@ -1,0 +1,31 @@
+.activity-board {
+  background-color: black;
+  display: grid;
+  height: 60vh;
+  margin: $l-size auto;
+  grid-template-areas:  "photo photo photo photo photo"
+                        "photo photo photo photo photo"
+                        "photo photo photo photo photo"
+                        "demo demo demo demo demo"
+                        "demo demo demo demo demo";
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-areas:  "photo photo photo demo demo"
+                          "photo photo photo demo demo"
+                          "photo photo photo demo demo"
+                          "photo photo photo demo demo"
+                          "photo photo photo demo demo"
+  }
+}
+
+.activity-board__photo {
+  background: $gray;
+  grid-area: photo;
+}
+
+.activity-board__info {
+  background: $yellow;
+  color: $purple;
+  grid-area: demo;
+  padding: $s-size;
+}

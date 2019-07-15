@@ -3,6 +3,7 @@ import ProgressBar from '../../components/ProgressBar';
 import api from '../../services/activities.json';
 import Navbar from '../../components/Navbar';
 import Assistant from '../../components/Assistant';
+import ActivityBoard from '../../components/ActivityBoard';
 
 class Activity extends Component{
   state = {
@@ -41,9 +42,9 @@ class Activity extends Component{
       <div>
         <Navbar />
         {/* <h1>Atividade: {this.state.activity.title}</h1> */}
-        <div className='dashboard'>
-        <ProgressBar />
-          
+        <div className='activity'>
+          <ProgressBar />
+          <ActivityBoard />
         </div>
         <Assistant />
       </div>
