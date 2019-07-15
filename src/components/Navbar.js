@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar__container'>
-        <img src={logo} alt='Teaching Hand' className="navbar__logo"></img>
+        <Link to='/dashboard'>
+          <img src={logo} alt='Teaching Hand' className="navbar__logo"></img>
+        </Link>
         <Link to='/'>
           Sair <FontAwesomeIcon icon={faSignOutAlt} size='lg'/>
         </Link>
