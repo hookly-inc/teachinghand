@@ -17,6 +17,8 @@ class Activity extends Component{
   }
 
   componentWillMount() {
+
+    console.log(this.props.match.params.id)
     const activityId = this.props.match.params.id;
 
     this.setState({
@@ -28,7 +30,6 @@ class Activity extends Component{
     try {
       const activity = activityAPI.activities.find(act => act.id == this.state.id);
       const activityData = activityDataAPI;
-      // console.log(activityData.steps)
 
       this.setState({
         activity:{
@@ -46,7 +47,6 @@ class Activity extends Component{
     return(
       <div>
         <Navbar />
-        {/* <h1>Atividade: {this.state.activity.title}</h1> */}
         <div className='activity'>
           <ProgressBar />
           {this.state.activity.steps.map(step => <ActivityBoard video={step.video} word={step.word}/>)}
