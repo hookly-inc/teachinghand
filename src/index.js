@@ -5,6 +5,7 @@ import './styles/styles.scss';
 import * as serviceWorker from './serviceWorker';
 import Routes from './routes';
 
+
 ReactDOM.render(<Routes />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
