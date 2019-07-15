@@ -1,0 +1,29 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "title": "Alfabeto",
+      "locked": false
+    },
+    {
+      "id": 2,
+      "title": "Números",
+      "locked": false
+    },
+    {
+      "id": 3,
+      "title": "Cores",
+      "locked": true
+    },
+    {
+      "id": 4,
+      "title": "Animais",
+      "locked": true
+    },
+    {
+      "id": 5,
+      "title": "Família",
+      "locked": true
+    }
+  ]
+}
