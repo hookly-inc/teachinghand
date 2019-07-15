@@ -11,21 +11,24 @@ class ActivityBoard extends Component {
   componentWillMount() {
     this.setState({
       steps: activity.steps
-    })
+    });
   }
 
   handleVideo() {
     this.setState({
       showVideo: !this.state.showVideo
-    })
+    });
   }
 
   render() {
     return (
       <div className='activity-board'>
-        <div className='activity-board__photo' onClick={() => this.handleVideo()}></div>
+        <div className='activity-board__container' onClick={() => this.handleVideo()}>
+          <img className='activity-board__container__photo' src="https://images.wallpaperscraft.com/image/bird_silhouette_vector_134154_1920x1080.jpg" alt='a'/>
+        </div>
         <div className='activity-board__info'>
-          <h1>{this.props.word}</h1>
+          <span className='activity-board__info__uppercase'>{this.props.word}</span>
+          <span className='activity-board__info__lowercase'>{this.props.word}</span>
         </div>
 
         <Modal isOpen={this.state.showVideo} className='activity-board__video'
