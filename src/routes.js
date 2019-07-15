@@ -12,7 +12,7 @@ const Routes = () => (
       <Route exact path='/' component={Login} />
       <Route path='/register' component={Register} />
       <Route exact path='/dashboard' component={Dashboard} />
-      <Route path='/dashboard/activity/:id' component={Activity} />
+      <Route path='/activity/:id' component={Activity} />
 
       <Route component={NoMatch} />
     </Switch>

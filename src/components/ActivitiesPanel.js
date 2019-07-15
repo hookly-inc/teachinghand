@@ -25,7 +25,7 @@ class ActivitiesPanel extends Component {
     return (
       <section className='activities-panel'>
         {this.state.activities.map((activity, index) => 
-          <ActivityCard key={index} title={activity.title} locked={activity.locked}/>
+          <ActivityCard key={index} title={activity.title} locked={activity.locked} activityId={activity.id}/>
         )}
       </section>
     );
