@@ -20,6 +20,7 @@
 
 .activity-board__photo {
   background: $gray;
+  cursor: pointer;
   grid-area: photo;
 }
 
@@ -28,4 +29,34 @@
   color: $purple;
   grid-area: demo;
   padding: $s-size;
+}
+
+.activity-board__video {
+  background: $default-blue;
+  border-radius: 10px;
+  padding: $s-size;
+  max-width: 60rem;
+  margin: 0 auto;
+  outline: 0;
+  overflow: hidden;
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 200ms ease-in-out;
+  padding: 0 $s-size;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
 }
