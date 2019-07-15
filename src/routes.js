@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './pages/login'
 import Dashboard from './pages/dashboard';
 import Register from './pages/register';
-import Activity from './components/Activity';
+import Activity from './pages/activity';
 import NoMatch from './pages/404';
 
 const Routes = () => (
