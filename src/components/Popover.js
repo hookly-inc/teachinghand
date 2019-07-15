@@ -5,15 +5,13 @@ class Popover extends Component {
     active: false
   }
 
-  componentDidUpdate() {
-    this.setState({
-      active: !this.state.active
-    })
+  componentWillReceiveProps(nextProps) {
+    if (nextProps !== this.props) this.setState({ active: nextProps.isOpen });
   }
 
   render() {
     return (
-      <div>
+      <div className='popover_container'>
         {this.state.active &&
         <div className='popover'>
           <p>This is a popover!</p>

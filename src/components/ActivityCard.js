@@ -13,7 +13,6 @@ class ActivityCard extends Component {
     this.setState({
       popoverOpen: !this.state.popoverOpen
     });
-    console.log(this.state.popoverOpen);
   }
 
   render() {
