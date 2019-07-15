@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import ProgressBar from '../../components/ProgressBar';
-import api from '../../services/activities.json';
 import Navbar from '../../components/Navbar';
 import Assistant from '../../components/Assistant';
 import ActivityBoard from '../../components/ActivityBoard';
 
+import activityAPI from '../../services/activities.json';
+import activityDataAPI from '../../services/alphabet.json';
 class Activity extends Component{
   state = {
     id: undefined,
     activity: {
       title: undefined,
-      locked: true
+      locked: true,
+      steps: []
     }
   }
 
@@ -24,12 +26,15 @@ class Activity extends Component{
 
   componentDidMount() {
     try {
-      const activity = api.activities.find(act => act.id == this.state.id);
+      const activity = activityAPI.activities.find(act => act.id == this.state.id);
+      const activityData = activityDataAPI;
+      // console.log(activityData.steps)
 
       this.setState({
         activity:{
           title: activity.title,
-          locked: activity.locked
+          locked: activity.locked,
+          steps: activityData.steps
         }
       });
     }catch(e) {
@@ -44,7 +49,7 @@ class Activity extends Component{
         {/* <h1>Atividade: {this.state.activity.title}</h1> */}
         <div className='activity'>
           <ProgressBar />
-          <ActivityBoard />
+          {this.state.activity.steps.map(step => <ActivityBoard video={step.video} word={step.word}/>)}
         </div>
         <Assistant />
       </div>
