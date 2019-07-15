@@ -1,0 +1,16 @@
+.popover_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.popover {
+  background-color: white;
+  border: 3px solid $gray;
+  bottom: -$m-size;
+  color: black;
+  padding: $s-size;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+}
