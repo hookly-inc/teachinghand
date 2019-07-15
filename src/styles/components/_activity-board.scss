@@ -10,11 +10,12 @@
                         "demo demo demo demo demo";
 
   @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:  "photo photo photo demo demo"
                           "photo photo photo demo demo"
                           "photo photo photo demo demo"
                           "photo photo photo demo demo"
-                          "photo photo photo demo demo"
+                          "photo photo photo demo demo";
   }
 }
 
@@ -35,6 +36,8 @@
   color: $purple;
   grid-area: demo;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: column;
@@ -44,7 +47,6 @@
 .activity-board__info__uppercase,
 .activity-board__info__lowercase {
   display: flex;
-  border: 1px solid $purple;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -57,12 +59,14 @@
 }
 
 .activity-board__info__uppercase {
+  border-right: 3px solid white;
   width: 50%;
   text-transform: uppercase;
-
+  overflow: hidden;
+  
   @media screen and (min-width: $desktop-breakpoint) {
+    border-bottom: 3px solid white;
     width: 100%;
-    padding: $m-size;
   }
 }
 
@@ -71,7 +75,6 @@
 
   @media screen and (min-width: $desktop-breakpoint) {
     width: 100%;
-    padding: $m-size;
   }
 }
 
