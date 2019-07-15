@@ -27,7 +27,7 @@ class ActivityCard extends Component {
           <FontAwesomeIcon icon={faLock} size='3x'/>
         </span>}
 
-        <Popover isOpen={this.state.popoverOpen}/>
+        <Popover isOpen={!this.state.locked && this.state.popoverOpen}/>
       </div>
     );
   }
