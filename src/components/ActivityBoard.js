@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Video from './Video';
 
-import activity from '../services/alphabet.json';
 class ActivityBoard extends Component {
   state = {
     showVideo: false
   }
 
   componentWillMount() {
-    this.setState({
-      steps: activity.steps
-    });
   }
 
   handleVideo() {

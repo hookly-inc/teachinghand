@@ -5,8 +5,9 @@ import Assistant from '../../components/Assistant';
 import ActivityBoard from '../../components/ActivityBoard';
 
 import activityAPI from '../../services/activities.json';
-import activityDataAPI from '../../services/alphabet.json';
-class Activity extends Component{
+import activityDataAPI from '../../services/activities_data.json';
+
+class Activity extends Component {
   state = {
     id: undefined,
     activity: {
@@ -17,8 +18,6 @@ class Activity extends Component{
   }
 
   componentWillMount() {
-
-    console.log(this.props.match.params.id)
     const activityId = this.props.match.params.id;
 
     this.setState({
@@ -31,25 +30,27 @@ class Activity extends Component{
       const activity = activityAPI.activities.find(act => act.id == this.state.id);
       const activityData = activityDataAPI;
 
+      const activitySelected = activityData.find(x => x.activity_id == this.state.id);
+
       this.setState({
-        activity:{
+        activity: {
           title: activity.title,
           locked: activity.locked,
-          steps: activityData.steps
+          steps: activitySelected.steps
         }
       });
-    }catch(e) {
+    } catch (e) {
       // Do nothing at all
     }
   }
 
   render() {
-    return(
+    return (
       <div>
         <Navbar />
         <div className='activity'>
           <ProgressBar />
-          {this.state.activity.steps.map(step => <ActivityBoard video={step.video} word={step.word}/>)}
+          {this.state.activity.steps.map(step => <ActivityBoard key={step.video} video={step.video} word={step.word} />)}
         </div>
         <Assistant />
       </div>
