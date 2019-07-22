@@ -1,13 +1,78 @@
+// Login
 .login {
   align-items: center;
   background-color: $default-blue;
-  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 100%;
   height: 100vh;
 }
 
-.login__container {
+.login-logo {
+  width: 12em;
+}
+
+// Login container
+.login-container {
+  align-items: center;
+  background-color: #F5F9FF;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 90%;
+  padding: $m-size 0;
   text-align: center;
+  width: 27em;
+}
+
+.login-container__header {
+  color: #707070;
+}
+
+// Login form
+.login-form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.login-form__group {
+  margin: $s-size 0;
+}
+
+.login-form__input {
+  border: 1px solid $gray;
+  border-radius: 5px;
+  display: block;
+  padding: $s-size;
+  width: 100%;
+  outline-color: $default-blue;
+
+  &::placeholder {
+    color: $gray;
+  }
+}
+
+.login-form__check {
+  margin: $s-size 0;
+}
+
+.login-form-button {
+  background-color: $gray;
+  border-radius: 20px;
+  color: white;
+  display: block;
+  margin: $s-size 0;
+  padding: $s-size;
+  text-decoration: none;
+  width: 100%;
+}
+
+.login-form-button__primary {
+  background-color: $default-blue;
+}
+
+.login-form-button__secondary {
+  background-color: $green;
 }
