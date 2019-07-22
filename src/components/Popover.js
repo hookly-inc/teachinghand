@@ -14,7 +14,7 @@ class Popover extends Component {
       <div className='popover_container'>
         {this.state.active &&
         <div className='popover'>
-          <p>This is a popover!</p>
+          {this.props.children}
         </div>}
       </div>
     );

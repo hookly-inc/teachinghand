@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faPlus, faPlay } from '@fortawesome/free-solid-svg-icons';
 import Popover from './Popover';
+import { Link } from 'react-router-dom';
 
 class ActivityCard extends Component {
   state = {
+    activityId: this.props.activityId,
     locked: this.props.locked,
     popoverOpen: false
   }
@@ -27,7 +29,15 @@ class ActivityCard extends Component {
           <FontAwesomeIcon icon={faLock} size='3x'/>
         </span>}
 
-        <Popover isOpen={!this.state.locked && this.state.popoverOpen}/>
+        <Popover isOpen={!this.state.locked && this.state.popoverOpen}>
+          <Link to='/' className='popover_icon'>
+            <FontAwesomeIcon icon={faPlus} size='2x'/>
+          </Link>
+          
+          <Link to={`/activity/${this.state.activityId}`} className='popover_icon'>
+            <FontAwesomeIcon icon={faPlay} size='2x'/>
+          </Link>
+        </Popover>
       </div>
     );
   }

@@ -9,8 +9,23 @@
   border: 3px solid $gray;
   bottom: -$m-size;
   color: black;
+  display: flex;
+  justify-content: space-around;
   padding: $s-size;
   position: absolute;
   text-align: center;
   width: 50%;
 }
+
+.popover_icon {
+  background-color: $darken-blue;
+  border-radius: 3px;
+  color: black;
+  padding: $s-size;
+
+  &:nth-child(2n) {
+    background-color: $green;
+  }
+  
+}
+
