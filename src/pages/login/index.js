@@ -1,31 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import macaco from '../../images/macaquinho.png';
+import BoxForm from '../../components/BoxForm';
 
 const Login = () => {
   return (
     <div className="login">
-      <img src={macaco} className="login-logo" alt="Teaching Hand"/>
-      <div className="login-container">
-        <h1 className="login-container__header">Seja bem vindo!</h1>
-
-        <div className="login-form">
+      <BoxForm title="Seja bem vindo!">
           <form>
-            <div className="login-form__group">
-              <input type="email" className="login-form__input" placeholder="E-mail"/>
+            <div className="box-form__group">
+              <input type="email" className="box-form__input" placeholder="E-mail"/>
             </div>
-            <div className="login-form__group">
-              <input type="password" className="login-form__input" placeholder="Senha"/>
+            <div className="box-form__group">
+              <input type="password" className="box-form__input" placeholder="Senha"/>
             </div> 
-            <div className="login-form__group">
-              <input type="checkbox" className="login-form__check"/> 
+            <div className="box-form__group">
+              <input type="checkbox" className="box-form__check"/> 
               <label> Manter conectado</label>
             </div>
-            <Link className="login-form-button login-form-button__primary" to='/dashboard'>Entrar </Link> 
-            <Link className="login-form-button login-form-button__secondary" to='/register'> Cadastrar-se</Link>
+            <Link className="box-form--button box-form--button__primary" to='/dashboard'>Entrar </Link> 
+            <Link className="box-form--button box-form--button__secondary" to='/register'> Cadastrar-se</Link>
           </form>
-        </div>
-      </div>
+      </BoxForm>
     </div>
   )
 }
