@@ -7,9 +7,6 @@ class ActivityBoard extends Component {
     showVideo: false
   }
 
-  componentWillMount() {
-  }
-
   handleVideo() {
     this.setState({
       showVideo: !this.state.showVideo
@@ -20,11 +17,11 @@ class ActivityBoard extends Component {
     return (
       <div className='activity-board'>
         <div className='activity-board__container' onClick={() => this.handleVideo()}>
-          <img className='activity-board__container__photo' src="https://images.wallpaperscraft.com/image/bird_silhouette_vector_134154_1920x1080.jpg" alt='a'/>
+          <img className='activity-board__container__photo' src={this.props.image} alt={this.props.word}/>
         </div>
         <div className='activity-board__info'>
-          <span className='activity-board__info__uppercase'>{this.props.word}</span>
-          <span className='activity-board__info__lowercase'>{this.props.word}</span>
+          <div className='activity-board__info__uppercase'>{this.props.word}</div>
+          <div className='activity-board__info__lowercase'>{this.props.word}</div>
         </div>
 
         <Modal isOpen={this.state.showVideo} className='activity-board__video'

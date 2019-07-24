@@ -49,7 +49,7 @@ class Activity extends Component {
         <Navbar />
         <div className='activity'>
           <ProgressBar />
-          {this.state.activity.steps.map(step => <ActivityBoard key={step.video} video={step.video} word={step.word} />)}
+          {this.state.activity.steps.map(step => <ActivityBoard key={step.video} video={step.video} word={step.word} image={step.image}/>)}
         </div>
       </div>
     )
