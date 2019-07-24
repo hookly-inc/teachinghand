@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import macaco from '../images/macaquinho.png';
 
 class BoxForm extends Component {

@@ -28,8 +28,13 @@
   margin: 0 auto;
 }
 
-.box-form__group {
+.box-form__group,
+.box-form__check {
   margin: $s-size 0;
+}
+
+.box-form__buttons {
+  padding: $s-size 0;
 }
 
 .box-form__input {
@@ -41,29 +46,52 @@
   outline-color: $default-blue;
 
   &::placeholder {
-    color: $gray;
+    color: gray;
   }
-}
-
-.box-form__check {
-  margin: $s-size 0;
 }
 
 .box-form--button {
   background-color: $gray;
+  border: 1px solid transparent;
   border-radius: 20px;
   color: white;
   display: block;
   margin: $s-size 0;
   padding: $s-size;
   text-decoration: none;
+  transition: 0.25s ease-out;
   width: 100%;
+
+  &:hover {
+    border-radius: 10px;
+  }
 }
 
 .box-form--button__primary {
   background-color: $default-blue;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $default-blue;
+    color: $default-blue;
+  }
 }
 
 .box-form--button__secondary {
   background-color: $green;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $green;
+    color: $green;
+  }
+}
+
+.box-form__link {
+  text-decoration: underline;
+  color: $default-blue;
+  
+  &:hover {
+    color: $purple;
+  }
 }
