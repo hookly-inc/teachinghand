@@ -1,6 +1,6 @@
 import React from 'react';
 import BoxForm from '../../components/BoxForm';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -29,7 +29,7 @@ const Register = () => {
 
             <div className="box-form__buttons">
               <Link className="box-form--button box-form--button__secondary" to='/dashboard'>Enviar</Link>
-              <Link to='/' className="box-form__link">Já sou cadastrado</Link>
+              <NavLink to='/' className="box-form__link">Já sou cadastrado</NavLink>
             </div>
 
           </form>

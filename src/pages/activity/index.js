@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from '../../components/ProgressBar';
 import Navbar from '../../components/Navbar';
-import Assistant from '../../components/Assistant';
 import ActivityBoard from '../../components/ActivityBoard';
 
 import activityAPI from '../../services/activities.json';
@@ -52,7 +51,6 @@ class Activity extends Component {
           <ProgressBar />
           {this.state.activity.steps.map(step => <ActivityBoard key={step.video} video={step.video} word={step.word} />)}
         </div>
-        <Assistant />
       </div>
     )
   }
